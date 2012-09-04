@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "FGalleryPhotoView.h"
 #import "FGalleryPhoto.h"
+#import "FrontViewController.h"
 
 
 typedef enum
@@ -26,7 +27,7 @@ typedef enum
 
 @protocol FGalleryViewControllerDelegate;
 
-@interface FGalleryViewController : UIViewController <UIScrollViewDelegate,FGalleryPhotoDelegate,FGalleryPhotoViewDelegate> {
+@interface FGalleryViewController : FrontViewController <UIScrollViewDelegate,FGalleryPhotoDelegate,FGalleryPhotoViewDelegate> {
 	
 	BOOL _isActive;
 	BOOL _isFullscreen;
